@@ -3,9 +3,6 @@
 Personal Repository for getting accustomed to backend programing.
 Testing server structures and different databases in small scale tutorial projects from different sites and courses.
 
-Portfolio
-===
-
 ## Motivation
 
 The goal of the Project is to learn the basic concepts and techstacks for backend development.
