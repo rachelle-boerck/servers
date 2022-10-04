@@ -11,6 +11,7 @@ This Project will include (at some point):
 - Client [ ]
 - Node server [ ]
 - GraphQL server [ ]
+- Java Springboot Framework [ ]
 - MoongoDB requests [ ]
 - Postgres requests [ ]
 
@@ -30,7 +31,7 @@ The topics that will be covered contain (personal reminders):
 
 ## Project Description
 
-The Main project will contain a client (app or webpage) with a server and a database. The client will have simple functions to make some server requests and handling.
+The Main project will contain a client (app or webpage) with a server and a database. The client will have simple functions to make some server requests.
 
 
 ## First Steps 
