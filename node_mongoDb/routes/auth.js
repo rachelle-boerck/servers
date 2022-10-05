@@ -1,12 +1,20 @@
 const router = require('express').Router();
 const User = require('../models/User');
-const  { validateUsername } = require('../utils/validator');
+const  { validateUserInput } = require('../utils/validator');
 
 router.post('/register', async (req, res) => {
     
-    const validName = validateUsername(req.body.username);
+    const { validUsername, validEmail, validPassword } = validateUserInput(
+        req.body.username,
+        req.body.email,
+        req.body.password
+    );
 
-    if(validName){
+    console.log(validUsername);
+    console.log(validEmail);
+    console.log(validPassword);
+
+    if(validUsername && validEmail && validPassword ){
     const user = new User({
         username: req.body.username,
         email: req.body.email,
@@ -24,9 +32,19 @@ router.post('/register', async (req, res) => {
     } 
     // Case for invalid input.
     else {
-        if(!validName){
+        if(!validUsername){
             return res.status(400).send({
                 message: 'Invalid username.'
+            });
+        }
+        if(!validEmail){
+            return res.status(400).send({
+                message: 'Invalid e-mail adress.'
+            });
+        }
+        if(!validPassword){
+            return res.status(400).send({
+                message: 'Invalid pasword.'
             });
         }
     }
